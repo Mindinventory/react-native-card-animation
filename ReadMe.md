@@ -134,6 +134,10 @@ const shadowOpacity = 1;
 
 We would be really happy if you send us links of your projects where you use our component. Just send an email to sales@mindinventory.com and do let us know if you have any questions or suggestion regarding our work.
 
+**LICENSE!**
+
+React-native-card-animation is [MIT-licensed](/LICENSE).
+
 **Keywords**
 
 react-native flatlist-animaiton animation onScroll-faltlist-animation
