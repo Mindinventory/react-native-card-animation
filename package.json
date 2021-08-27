@@ -1,6 +1,6 @@
 {
   "name": "@mindinventory/react-native-card-animation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Beautiful Flatlist with OnScroll and OnClick animation.By using this, user can easily animate their flatlist, they can customise animation’s direction, duration, opacity with different colors. They can customise view by their own and integrate into flatlist.",
   "main": "index.js",
   "scripts": {
