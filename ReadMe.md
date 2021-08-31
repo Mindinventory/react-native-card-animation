@@ -1,8 +1,8 @@
-#Description
+# Description
 
 Beautiful Flatlist with OnScroll and OnClick animation. By using this, user can easily animate their flatlist, they can customise animation’s direction, duration, opacity with different colors. They can customise view by their own and integrate into flatlist.  
 
-#Installation
+# Installation
 
 using npm:
 ```
@@ -14,16 +14,16 @@ using yarn:
 yarn add @mindinventory/react-native-card-animation
 ```
 
-###Supported platform
+### Supported platform
 
 * iOS
 * Android
 
-###Dependencies
+### Dependencies
 
 * react-native-reanimated
 
-#Usage
+# Usage
 ```js
 // User Data to load in List
 
@@ -115,7 +115,7 @@ const shadowOpacity = 1;
 />
 ```
 
-#Component props
+# Component props
 
 | prop              | value        | required/optional	| description                                               |
 | ------            | ------       | ------             | ------                                                    |
@@ -138,11 +138,11 @@ const shadowOpacity = 1;
 | renderCard	      | function	   | required	          | Render custom component in flatlist created by user.      |
 
 
-#LICENSE!
+# LICENSE!
 
 React-native-card-animation is [MIT-licensed](https://github.com/access-mindinventory/react-native-card-animation/blob/master/LICENSE).
 
 
-#Let us know!
+# Let us know!
 
 We would be really happy if you send us links of your projects where you use our component. Just send an email to sales@mindinventory.com and do let us know if you have any questions or suggestion regarding our work.
