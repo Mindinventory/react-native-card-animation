@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Animated, Platform} from 'react-native';
 import {Extrapolate} from 'react-native-reanimated';
-import {Card} from './Card';
+import Card from './Card';
 import styles from './styles';
 
 const CardAnimation = props => {
@@ -17,11 +17,11 @@ const CardAnimation = props => {
     bounceToVal,
     bounceEndVal,
     backgroundColor,
-    detailScreenName,
     spaceBetween,
     borderRadius,
     shadowRadius,
     shadowOpacity,
+    onCardPress,
   } = props;
   const xy = new Animated.Value(0);
   const onScroll = Animated.event(
@@ -53,11 +53,11 @@ const CardAnimation = props => {
         opacityEndVal={opacityEndVal ? opacityEndVal : 1}
         bounceToVal={bounceToVal ? bounceToVal : 1.1}
         bounceEndVal={bounceEndVal ? bounceEndVal : 1}
-        detailScreenName={detailScreenName ? detailScreenName : ''}
         spaceBetween={spaceBetween ? spaceBetween : -25}
         borderRadius={borderRadius ? borderRadius : 30}
         shadowRadius={shadowRadius ? shadowRadius : 10}
-        shadowOpacity={shadowOpacity ? shadowOpacity : 0.8}>
+        shadowOpacity={shadowOpacity ? shadowOpacity : 0.8}
+        onCardPress={onCardPress}>
         {props.renderCard === undefined ? (
           <View style={{height: 150}} />
         ) : (

@@ -1,6 +1,5 @@
 import React from 'react';
 import {Animated, Pressable} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
 import styles from './styles';
 
 const Card = props => {
@@ -13,13 +12,12 @@ const Card = props => {
     opacityEndVal,
     bounceToVal,
     bounceEndVal,
-    detailScreenName,
     spaceBetween,
     borderRadius,
     shadowRadius,
     shadowOpacity,
+    onCardPress,
   } = props;
-  const navigation = useNavigation();
   const animatedVal = new Animated.Value(1);
   const bounceAnimatedVal = new Animated.Value(1);
 
@@ -73,15 +71,19 @@ const Card = props => {
           ],
         },
       ]}>
+      {onCardPress === undefined ? (
+        <>
+          {props.children}
+        </>
+      ) : (
       <Pressable
         onPress={() => {
           onPressAnimate();
-          if (detailScreenName !== '') {
-            navigation.navigate(detailScreenName, {item: item});
-          }
+          onCardPress(item)
         }}>
         {props.children}
       </Pressable>
+      )}
     </Animated.View>
   );
 };

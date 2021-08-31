@@ -15,6 +15,10 @@ yarn add @mindinventory/react-native-card-animation
 * iOS
 * Android
 
+**Dependencies**
+
+* react-native-reanimated
+
 **Usage**
 ```js
 // User Data to load in List
@@ -79,7 +83,6 @@ const opacityEndVal = 1;
 const bounceToVal = 1.1;
 const bounceEndVal = 1;
 const bgColor = “#1a212f”;
-const detailScreenName = 'DetailCard';
 const spaceBetween = -25;
 const borderRadius = 25;
 const shadowRadius = 10;
@@ -99,11 +102,11 @@ const shadowOpacity = 1;
   bounceToVal={bounceToVal}
   bounceEndVal={bounceEndVal}
   backgroundColor={bgColor}
-  detailScreenName={detailScreenName}
   spaceBetween={spaceBetween}
   borderRadius={borderRadius}
   shadowRadius={shadowRadius}
   shadowOpacity={shadowOpacity}
+  onCardPress={item => {alert(`You have pressed : ${item.time}`)}}
   renderCard={item => <CustomCardView item={item} />}
 />
 ```
@@ -123,11 +126,11 @@ const shadowOpacity = 1;
 | bounceToVal	      | number	     | optional	          | Start value for animate bounce of view.                   |
 | bounceEndVal	    | number	     | optional	          | End value for animate bounce of view.                     |
 | backgroundColor	  | string	     | optional	          | It will apply on flatlist background colour.              |
-| detailScreenName	| string	     | optional	          | Name of next screen which will navigate from list screen. |
 | spaceBetween	    | number	     | optional	          | Increase and decrease the space between list of items.    |
 | borderRadius	    | number	     | optional	          | Custom border radius can apply on list of items.          |
 | shadowRadius	    | number	     | optional	          | Custom shadow radius can apply on list of items.          |
 | shadowOpacity	    | number	     | optional	          | Custom shadow opacity can apply on list of items.         |
+| onCardPress	      | function	   | optional	          | Get callBack data form selected index of flatlist.        |
 | renderCard	      | function	   | required	          | Render custom component in flatlist created by user.      |
 
 **Let us know!**
